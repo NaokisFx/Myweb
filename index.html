@@ -50,22 +50,6 @@ const err = document.getElementById('err');
 function showError(msg){ err.textContent = msg; err.style.display='block'; }
 
 // ====== AUDIO ======
-const audio = document.getElementById('audio');
-const playBtn = document.getElementById('playBtn');
-const pickBtn = document.getElementById('pickBtn');
-const pickFile = document.getElementById('pickFile');
-
-playBtn.onclick = async () => {
-  try { if (audio.paused) { await audio.play(); playBtn.textContent='⏸︎'; } else { audio.pause(); playBtn.textContent='▶︎'; } }
-  catch(e){ showError('Si no suena, toca “Elegir canción” y selecciona tu MP3.'); }
-};
-pickBtn.onclick = () => pickFile.click();
-pickFile.onchange = () => {
-  if (pickFile.files && pickFile.files[0]) {
-    const url = URL.createObjectURL(pickFile.files[0]);
-    audio.src = url; audio.play().then(()=> playBtn.textContent='⏸︎').catch(()=>{});
-  }
-};
 
 // ====== WEBGL CHECK ======
 try { 
