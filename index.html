@@ -54,13 +54,21 @@
     .mbr-section-title, .mbr-section-subtitle,
     h1, h2, h3, h4, h5, h6,
     .plan-title, .main-title, .section-content-title,
-    .number, .navbar-caption, .card-title a, .mbr-black,
-    .price, .price-term {
+    .number, .navbar-caption, .card-title a, .mbr-black {
       background: var(--gradient-gold) !important;
       -webkit-background-clip: text !important;
       background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
       color: var(--gold-2) !important; /* fallback si no soporta clip */
+    }
+
+    /* Precio: color negro sólido (sin degradado) */
+    .price, .price-term {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      background-clip: unset !important;
+      -webkit-text-fill-color: initial !important;
+      color: var(--black-2) !important;
     }
 
     /* Menú con degradado */
@@ -436,7 +444,7 @@
                         <h6 class="plan-title mbr-fonts-style mb-5 display-2"><strong>CONFIGURACIÓN DE SERVIDOR</strong></h6>
                         <div class="plan-price">
                             <span class="price mbr-fonts-style m-0 display-7">$</span>
-                            <span class="price mbr-fonts-style m-0 display-1"><strong>9.99</strong></span>
+                            <span class="price mbr-fonts-style m-0 display-1"><strong>24.99</strong></span>
                             <span class="price-term mbr-fonts-style mb-3 display-7">pago único</span>
                         </div>
                     </div>
@@ -460,7 +468,7 @@
                         <h6 class="plan-title mbr-fonts-style mb-5 display-2"><strong>DETALLES</strong></h6>
                         <div class="plan-price">
                             <span class="price mbr-fonts-style m-0 display-7">$</span>
-                            <span class="price mbr-fonts-style m-0 display-1"><strong>4.99</strong></span>
+                            <span class="price mbr-fonts-style m-0 display-1"><strong>2.99</strong></span>
                             <span class="price-term mbr-fonts-style mb-3 display-7">pago único</span>
                         </div>
                     </div>
